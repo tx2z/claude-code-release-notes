@@ -54,6 +54,27 @@ your-project/
 echo "release-notes/" >> .gitignore
 ```
 
+## Optional: Optimize for Your Project
+
+After installation, you can optimize the release notes generator for your specific project. This produces more relevant release notes by understanding your commit conventions and release workflow.
+
+Run this prompt in Claude Code:
+
+```
+I just installed the release-notes command in .claude/. Please:
+
+1. Analyze my repository to detect my commit conventions, versioning strategy, and release workflow
+2. Read the command files in .claude/commands/release-notes.md and .claude/release/agents/
+3. Optimize each release notes agent by:
+   - Adjusting commit pattern detection to match my commit message format
+   - Customizing the marketing template for my product type (SaaS, mobile app, library, etc.)
+   - Configuring internal notes format based on my team communication style
+   - Setting up changelog format to match my existing CHANGELOG.md if present
+4. Keep the agent structure, output formats, and Git analysis logic unchanged
+
+Show me what you'll change before applying.
+```
+
 ## Usage
 
 In Claude Code, run the release notes command:
